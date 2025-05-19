@@ -1,0 +1,213 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  background-image: url("imagem/placa2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  color: rgb(255, 255, 255);
+}
+
+/* Desfoque */
+/* Desfoque */
+.desfoque {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li {
+  margin: 0 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ff8504;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 700px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  .menuBtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .closeBtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+  }
+}
+/* Responsividade */
+@media only screen and (max-width: 700px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(38, 48, 57, 0.9);
+    text-align: center;
+    z-index: 10;
+  }
+
+  ul li {
+    margin: 15px 0;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .vantagens,
+  .desvantagens {
+    text-align: center;
+    width: 90%;
+  }
+
+  .tabela-container h3 {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 40px;
+  color: #d56b00;
+}
+.tabela-container {
+  width: 100%;
+  overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+  margin: 20px auto;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+  background-color: rgba(255, 153, 0, 0.8);
+  color: black;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade da tabela */
+@media only screen and (max-width: 700px) {
+  .tabela-container {
+    padding: 10px;
+  }
+
+  table {
+    display: block;
+    width: auto;
+    overflow-x: scroll; /* Permite rolagem horizontal */
+    white-space: nowrap; /* Impede que as células quebrem linha */
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 14px; /* Reduz tamanho da fonte para melhor ajuste */
+  }
+
+  .tabela-container h3 {
+    font-size: 28px;
+  }
+}

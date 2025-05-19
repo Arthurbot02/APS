@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Open Sans", sans-serif;
+  background-image: url("imagem/placa2.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.desfoque {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.nav-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li {
+  margin: 0 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ff8504;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 700px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  .menuBtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .closeBtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+  }
+}
+@media only screen and (max-width: 700px) {
+  ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(38, 48, 57, 0.9);
+    text-align: center;
+    z-index: 10;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+}
+
+/* Seção de Implementação */
+#lei {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#lei h2 {
+  font-size: 40px;
+  color: #d56b00;
+  margin-bottom: 20px;
+}
+
+#lei p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Cards de cada etapa da implementação */
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.projeto {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 280px;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-5px);
+}
+
+.projeto h2 {
+  font-size: 1.5rem;
+  color: #ff8504;
+  margin-bottom: 10px;
+}
+
+.projeto p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Botões com animação */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+button {
+  background-image: linear-gradient(90deg, #c4982a, #ffae00);
+  padding: 12px 25px;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Animação pulando */
+.pulando {
+  animation: pulo 1s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes pulo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+}

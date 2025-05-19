@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontes.css" />
+  </head>
+  <body>
+    <div class="desfoque">
+      <!-- NAVIGATION BAR -->
+      <div class="nav-bar">
+        <div class="main-menu">
+          <span class="menuBtn" onclick="openMenu()">&#9776;</span>
+          <span class="closeBtn" onclick="closeMenu()">&#9746;</span>
+          <ul id="menu">
+            <li><a href="index.html">Energia solar</a></li>
+            <li><a href="pg.html">Projetos</a></li>
+            <li><a href="ref.html">Blog</a></li>
+            <li><a href="sbn.html">Sobre nós</a></li>
+            <li><a href="faq.html">Fale Conosco</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- FIM NAV -->
+
+      <!-- TABELA COMPARAÇÃO -->
+      <div class="tabela-container">
+        <h3>Comparação com Outras Fontes de Energia</h3>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Critério</th>
+              <th>Energia Solar</th>
+              <th>Petróleo</th>
+              <th>Carvão Mineral</th>
+              <th>Gás Natural</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Renovável?</td>
+              <td>✅ Sim</td>
+              <td>❌ Não</td>
+              <td>❌ Não</td>
+              <td>❌ Não</td>
+            </tr>
+            <tr>
+              <td>Impacto Ambiental</td>
+              <td>🌱 Muito Baixo</td>
+              <td>🔥 Muito Alto</td>
+              <td>🌪️ Altíssimo</td>
+              <td>💨 Alto</td>
+            </tr>
+            <tr>
+              <td>Custo Inicial</td>
+              <td>💰 Alto (instalação)</td>
+              <td>💵 Alto (extração)</td>
+              <td>💵 Barato</td>
+              <td>💵 Médio</td>
+            </tr>
+            <tr>
+              <td>Emissões de Poluentes</td>
+              <td>♻️ Quase zero</td>
+              <td>🌫️ Muito altas</td>
+              <td>🌫️ Altíssimas</td>
+              <td>🌫️ Moderadas</td>
+            </tr>
+            <tr>
+              <td>Durabilidade da Fonte</td>
+              <td>☀️ Infinita</td>
+              <td>🛢️ Limitada</td>
+              <td>🏭 Limitada</td>
+              <td>🔥 Limitada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br /><br />
+
+      <!-- ENERGIA SOLAR NO APAGÃO -->
+      <div class="tabela-container">
+        <h3>Tipos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Sistema</th>
+              <th>Funciona no Apagão?</th>
+              <th>Precisa de Baterias?</th>
+              <th>Vantagens</th>
+              <th>Desvantagens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>On-Grid (Conectado à rede)</td>
+              <td>❌ Não</td>
+              <td>❌ Não</td>
+              <td>Baixo custo, eficiência</td>
+              <td>Para de funcionar no apagão</td>
+            </tr>
+            <tr>
+              <td>Off-Grid (Isolado)</td>
+              <td>✅ Sim</td>
+              <td>✅ Sim</td>
+              <td>Independente da rede elétrica</td>
+              <td>Baterias caras e manutenção</td>
+            </tr>
+            <tr>
+              <td>Híbrido (Rede + Baterias)</td>
+              <td>✅ Sim</td>
+              <td>✅ Sim</td>
+              <td>Funciona no apagão e reduz conta</td>
+              <td>Maior custo de instalação</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- FIM APAGÃO -->
+    </div>
+
+    <script src="js/sobre.js" defer></script>
+  </body>
+</html>

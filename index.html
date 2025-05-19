@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <title>Menu Responsivo</title>
+  </head>
+  <body>
+    <div class="desfoque">
+      <!-- NAVIGATION BAR -->
+      <div class="nav-bar">
+        <div class="main-menu">
+          <span class="menuBtn" onclick="openMenu()">&#9776;</span>
+          <span class="closeBtn" onclick="closeMenu()">&#9746;</span>
+          <ul id="menu">
+            <li><a href="index.html">Energia solar</a></li>
+            <li><a href="pg.html">Projetos</a></li>
+            <li><a href="ref.html">Blog</a></li>
+            <li><a href="sbn.html">Sobre nós</a></li>
+            <li><a href="faq.html">Fale Conosco</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- fim da desfoque -->
+
+      <!-- CONTEÚDO PRINCIPAL ABAIXO DO MENU -->
+      <div id="lei">
+        <h2>Energia Solar</h2>
+        <br />
+        <p>
+          A energia solar é uma fonte de energia limpa, renovável e abundante,
+          proveniente da radiação do sol. Ela é captada e convertida em
+          eletricidade ou calor, podendo ser utilizada em residências, empresas
+          e até em comunidades inteiras. Além de não poluir o meio ambiente,
+          ajuda a reduzir os custos com energia elétrica e é uma grande aliada
+          do desenvolvimento sustentável.
+        </p>
+        <br />
+
+        <div>
+          <video controls>
+            <source src="videos/videoplayback.mp4" type="video/mp4" /></video
+          ><br /><br />
+
+          <h3 class="pulando">Saiba mais sobre a história da Energia Solar</h3>
+          <br />
+          <img
+            src="icons/seta.png"
+            alt="Ícone de sol"
+            width="50"
+            height="50"
+          /><br /><br />
+
+          <a href="pg1.html"><button>Origem</button></a>
+          <a href="fontes.html"
+            ><button>Comparação e Fontes de energia</button></a
+          >
+          <a href="pg2.html"><button>Exemplos</button></a>
+        </div>
+      </div>
+    </div>
+    <script src="js/sobre.js" defer></script>
+  </body>
+</html>

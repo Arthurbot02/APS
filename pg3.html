@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pg3.css" />
+    <title>Sobre Nós</title>
+  </head>
+  <body>
+    <div class="desfoque">
+      <!-- NAVIGATION BAR -->
+      <div class="nav-bar">
+        <div class="main-menu">
+          <span class="menuBtn" onclick="openMenu()">&#9776;</span>
+          <span class="closeBtn" onclick="closeMenu()">&#9746;</span>
+          <ul id="menu">
+            <li><a href="index.html">Energia solar</a></li>
+            <li><a href="pg.html">Projetos</a></li>
+            <li><a href="ref.html">Blog</a></li>
+            <li><a href="sbn.html">Sobre nós</a></li>
+            <li><a href="faq.html">Fale Conosco</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h1>Sobre Nós</h1>
+
+      <div class="perguntas-frequentes">
+        <ul class="faq">
+          <li>
+            <input type="radio" name="acordeon" id="missao" />
+            <label for="missao">Nossa Missão</label>
+            <div class="resposta">
+              Oferecer soluções acessíveis e eficientes em energia solar,
+              promovendo a sustentabilidade ambiental e ajudando nossos clientes
+              a economizar, reduzindo o impacto no meio ambiente.
+            </div>
+          </li>
+          <br />
+
+          <li>
+            <input type="radio" name="acordeon" id="visao" />
+            <label for="visao">Nossa Visão</label>
+            <div class="resposta">
+              Ser referência nacional em projetos de energia solar, reconhecida
+              pela excelência no atendimento, inovação tecnológica e compromisso
+              com a sustentabilidade.
+            </div>
+          </li>
+          <br />
+
+          <li>
+            <input type="radio" name="acordeon" id="valores" />
+            <label for="valores">Nossos Valores</label>
+            <div class="resposta">
+              <ul>
+                <li>Sustentabilidade</li>
+                <li>Ética e Transparência</li>
+                <li>Inovação Tecnológica</li>
+                <li>Compromisso com o Cliente</li>
+                <li>Qualidade e Eficiência</li>
+              </ul>
+            </div>
+          </li>
+          <br />
+
+          <li>
+            <input type="radio" name="acordeon" id="cultura" />
+            <label for="cultura">Nossa Cultura</label>
+            <div class="resposta">
+              Valorizamos um ambiente colaborativo, onde inovação, respeito e
+              responsabilidade ambiental andam juntos. Incentivamos o
+              crescimento pessoal e profissional de nossa equipe, sempre com
+              foco em soluções sustentáveis.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="js/sobre.js" defer></script>
+  </body>
+</html>

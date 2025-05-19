@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fale Conosco - Energia Solar</title>
+    <link rel="stylesheet" href="faq.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="desfoque">
+        <!-- NAVIGATION BAR -->
+        <div class="nav-bar">
+          <span class="menuBtn" onclick="openMenu()">&#9776;</span>
+          <span class="closeBtn" onclick="closeMenu()">&#9746;</span>
+          <ul id="menu">
+            <li><a href="index.html">Energia solar</a></li>
+            <li><a href="pg.html">Projetos</a></li>
+            <li><a href="ref.html">Blog</a></li>
+            <li><a href="sbn.html">Sobre nós</a></li>
+            <li><a href="faq.html">Fale Conosco</a></li>
+          </ul>
+        </div>
+        <h1>Tem alguma dúvida? Envie sua pergunta!</h1>
+        <div class="container">
+          <form action="#popup" method="POST">
+            <label for="nome">Seu Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              required
+            />
+
+            <label for="email">Seu Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+
+            <label for="pergunta">Sua Pergunta:</label>
+            <textarea
+              id="pergunta"
+              name="pergunta"
+              rows="4"
+              placeholder="Digite sua dúvida"
+              required
+            ></textarea>
+
+            <button type="submit">Enviar Pergunta</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pop-up de confirmação -->
+    <div id="popup" class="popup">
+      <p>E-mail enviado com sucesso!</p>
+      <a href="#">Fechar</a>
+    </div>
+    <script src="js/sobre.js" defer></script>
+  </body>
+</html>

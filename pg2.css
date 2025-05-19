@@ -1,0 +1,242 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  background-image: url("imagem/placa2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  color: #000;
+}
+
+/* Desfoque */
+/* Desfoque */
+.desfoque {
+  position: fixed; /* Fixa o elemento na tela */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Largura da tela inteira */
+  height: 100vh; /* Altura da tela inteira */
+  backdrop-filter: blur(15px); /* Desfoque */
+  -webkit-backdrop-filter: blur(15px); /* Compatibilidade com navegadores */
+  background-color: rgba(0, 0, 0, 0.4); /* Fundo com opacidade */
+  padding: 20px;
+  z-index: 1; /* Garantir que o desfoque esteja acima do conteúdo */
+}
+
+/* NAV BAR */
+.nav-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  position: relative; /* Garante que o menu esteja acima do fundo */
+  z-index: 10; /* Eleva a barra de navegação */
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Menu apenas na navegação */
+.nav-bar #menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar #menu li {
+  margin: 0 10px;
+}
+
+.nav-bar #menu li a {
+  text-decoration: none;
+  color: #ff8504;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-bar #menu li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 700px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  .menuBtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .closeBtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+  }
+   .nav-bar #menu li {
+    margin: 15px 0;
+  }
+}
+/* 
+/* Container FAQ */
+.perguntas-frequentes {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+/* Título */
+.perguntas-frequentes h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Lista de perguntas */
+.faq {
+  list-style: none;
+  width: 100%;
+}
+
+.faq li {
+  margin-bottom: 16px;
+}
+
+/* Oculta os inputs */
+.faq input[type="radio"] {
+  display: none;
+}
+
+/* Estilo do label (pergunta) */
+.faq li label {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.faq li label:hover {
+  background-color: #f0f0f0;
+}
+
+/* Número da pergunta */
+.faq li label span {
+  display: inline-block;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  margin-right: 15px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Ícone + ou - antes da pergunta */
+.faq li label::before {
+  content: "+";
+  font-size: 24px;
+  margin-right: 10px;
+  color: #304b80;
+}
+
+/* Ícone - quando ativo */
+.faq input[type="radio"]:checked + label::before {
+  content: "-";
+}
+
+/* Resposta oculta */
+.faq .resposta {
+  display: none; /* Ajustado para melhor controle da visibilidade */
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Resposta visível */
+.faq input[type="radio"]:checked + label + .resposta {
+  display: block;
+}
+
+/* Cor destacada no número */
+.faq input[type="radio"]:checked + label span {
+  background-color: #304b80;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .perguntas-frequentes {
+    padding: 30px 15px;
+  }
+
+  .faq li label {
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+  }
+
+  .faq li label span {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .faq .resposta {
+    padding: 10px;
+  }
+}
+h1 {
+  color: #ff8504;
+  align-items: center;
+  text-align: center;
+}

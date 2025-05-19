@@ -1,0 +1,271 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  background-image: url("imagem/placa2.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  color: #000;
+}
+
+/* Desfoque */
+/* Desfoque */
+.desfoque {
+position: relative;
+ width: 100%;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
+ background-color: rgba(0,0, 0, 0.3);
+ padding: 20px;
+}
+/* NAV BAR */
+.nav-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos do menu */
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar ul li {
+  margin: 0 10px;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #ff8504;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade do menu */
+@media only screen and (max-width: 700px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  .menuBtn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .closeBtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+  }
+  .nav-bar #menu li {
+    margin: 15px 0;
+}}
+/* Container FAQ */
+.perguntas-frequentes {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+/* Título */
+.perguntas-frequentes h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Lista de perguntas */
+.faq {
+  list-style: none;
+  width: 100%;
+}
+
+.faq li {
+  margin-bottom: 16px;
+}
+
+/* Oculta os inputs */
+.faq input[type="radio"] {
+  display: none;
+}
+
+/* Estilo do label (pergunta) */
+.faq li label {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.faq li label:hover {
+  background-color: #f0f0f0;
+}
+
+/* Número da pergunta */
+.faq li label span {
+  display: inline-block;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  margin-right: 15px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Ícone + ou - antes da pergunta */
+.faq li label::before {
+  content: "+";
+  font-size: 24px;
+  margin-right: 10px;
+  color: #304b80;
+}
+
+/* Ícone - quando ativo */
+.faq input[type="radio"]:checked + label::before {
+  content: "-";
+}
+
+/* Resposta oculta */
+.faq .resposta {
+  display: none; /* Ajustado para melhor controle da visibilidade */
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Resposta visível */
+.faq input[type="radio"]:checked + label + .resposta {
+  display: block;
+}
+
+/* Cor destacada no número */
+.faq input[type="radio"]:checked + label span {
+  background-color: #304b80;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .perguntas-frequentes {
+    padding: 30px 15px;
+  }
+
+  .faq li label {
+    font-size: 1rem;
+    display: block;
+    padding: 10px;
+  }
+
+  .faq li label span {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+
+  .faq .resposta {
+    padding: 10px;
+  }
+}
+/* Responsividade melhorada */
+.botao-centralizado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Botão responsivo */
+button {
+  background-image: linear-gradient(90deg, #c4982a, #ffae00);
+  padding: 12px 25px;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+
+
+  
+.pulando {
+  animation: pulo 1s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes pulo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+} 
